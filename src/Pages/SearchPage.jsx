@@ -13,20 +13,19 @@ const SearchPage = () => {
   // const { data } = useGoogleSearch(term);
 
   const data = response;
-  console.log(data);
 
   return (
     <>
-      <header>
-        <section className="brand-logo">
+      <header className="search-page__header">
+        <section>
           <Link to="/">
             <img
-              className="searchPage_logo"
+              className="search-page__header-logo"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
               alt="" />
           </Link>
         </section>
-        <section className="search-aria">
+        <section className="search-page__header-search-field">
           <SearchBar hideButtons/>
           <div className="search-option">
             <div className="search-option__left">
@@ -67,10 +66,38 @@ const SearchPage = () => {
         </section>
       </header>
       <main>
-        {term && ('')}
+        {term && (
+          <ul className="search-page__results">
+            <p>About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime} seconds) for {term}</p>
+
+            {data?.items.map(item => (
+              <li className="search-page__result" key={item.cacheId}>
+                {/* eslint-disable-next-line react/jsx-no-target-blank */}
+                <a className="search-page__result-link" href={item.link} target="_blank">
+                  {item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src && (
+                    <img
+                      className="search-page__result-image"
+                      src={item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src}
+                      alt=""
+                    />
+                  )}
+                  {item.displayLink} ✔️
+                </a>
+                {/* eslint-disable-next-line react/jsx-no-target-blank */}
+                <a className="search-page__result-title" href={item.link} target="_blank">
+                  <h2>{item.title}</h2>
+                </a>
+                <p className="search-page__result-snippet">
+                  {item.snippet}
+                </p>
+                <hr/>
+              </li>
+            ))}
+          </ul>
+        )}
       </main>
     </>
-  )
+  );
 }
 
-export default SearchPage
+export default SearchPage;
