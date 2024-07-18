@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px 5px;
+}
+
+img {
+    object-fit: contain;
+    height: 50px;
+}
+
+.search-aria {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: row;
+}
+.input-field__input > input {
+    width: 100%;
+}
+.search-option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.search-option__left,
+.search-option__right {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.search-option__left-item,
+.search-option__right-item {
+    font-size: small;
+    display: flex;
+    place-items: center;
+}
