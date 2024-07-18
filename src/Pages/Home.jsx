@@ -9,12 +9,12 @@ const Home = () => {
 
   return (
     <>
-      <header>
-        <div className="header-left">
+      <header className='home-header'>
+        <div className="home-header__left">
           <Link to='/about'>About</Link>
           <Link to='/store'>Store</Link>
         </div>
-        <div className="header-right">
+        <div className="home-header__right">
           <Link to='/gmail'>Gmail</Link>
           <Link to='images'>Images</Link>
           <AppsIcons style={{ fontSize: '18px' }} />
@@ -24,9 +24,10 @@ const Home = () => {
           />
         </div>
       </header>
-      <main>
+      <main className='home-main'>
         <section>
           <img
+            className='home-main__img'
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
             alt="Google logo image"
           />
