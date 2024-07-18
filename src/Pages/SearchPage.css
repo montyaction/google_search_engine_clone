@@ -1,16 +1,16 @@
-header {
+.search-page__header {
     display: flex;
     flex-direction: row;
     gap: 20px;
     padding: 20px 5px;
 }
 
-img {
+.search-page__header-logo {
     object-fit: contain;
     height: 50px;
 }
 
-.search-aria {
+.search-page__header-search-field {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -39,4 +39,26 @@ img {
     font-size: small;
     display: flex;
     place-items: center;
+}
+
+.search-page__results {
+    max-width: 650px;
+}
+.search-page__result {
+    margin-bottom: 20px;
+}
+.search-page__result-image {
+    height: 70px;
+    width: 70px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+.search-page__result-title h2 {
+    margin: 0 0;
+}
+.search-page__result-title:hover {
+    text-decoration: underline;
+}
+.search-page__result-snippet {
+    margin: 0 0;
 }
