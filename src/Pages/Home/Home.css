@@ -1,0 +1,35 @@
+.home-main {
+    min-height: calc(100% - 162.8px);
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.home-main__img {
+    min-height: 150px;
+    height: calc(100% - 560px);
+    max-height: 290px;
+
+    object-fit: contain;
+    padding-top: 5%;
+}
+
+.spacebar {
+    height: calc(100% - 125px);
+}
+
+.home-main__img img {
+    max-height: 230px;
+}
+
+.languages {
+    margin-top: 20px;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.languages a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #99c3ff;
+}
