@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #e8e8e8;
+  background: #202124;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,7 +19,8 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  /* color: #535bf2; */
+  text-decoration: underline;
 }
 
 ul {
@@ -29,9 +30,7 @@ ul {
 
 body {
   margin: 0;
-  display: flex;
-  min-width: 320px;
-  min-height: 100vh;
+  font-size: 14px;
 }
 
 h1 {
