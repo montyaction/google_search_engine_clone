@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Pages/Home/Home';
 import SearchResults from './Pages/SearchResult/SearchPage';
-import TopicPage from './Pages/Topic Page/TopicPage';
+import TopicPage from './Pages/TopicPage/TopicPage';
 
 function App() {
 
